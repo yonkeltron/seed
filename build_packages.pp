@@ -4,4 +4,4 @@ class build_packages {
   }
 }
 
-class { 'base_packages': }
+class { 'build_packages': }

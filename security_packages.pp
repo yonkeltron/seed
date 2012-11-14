@@ -1,5 +1,5 @@
 class security_packages {
-  package { ['bcrypt', 'checksecurity' 'harden-clients', 'harden-servers', 'nmap', 'logcheck', 'logcheck-database', 'mlocate', 'debsums']:
+  package { ['bcrypt', 'checksecurity', 'harden-clients', 'harden-servers', 'nmap', 'logcheck', 'logcheck-database', 'mlocate', 'debsums']:
     ensure => present
   }
 
