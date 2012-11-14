@@ -7,11 +7,13 @@ namespace :seed do
   namespace :puppet do
     desc 'Use puppet to install utility packages'
     task :utility_packages do
+      puts
       sh 'sudo puppet apply utility_packages.pp'
     end
 
     desc 'Use puppet to install security packages and config'
     task :security_packages do
+      puts
       sh 'sudo puppet apply security_packages.pp'
     end
   end
@@ -22,8 +24,9 @@ namespace :seed do
 
     desc 'Install oh-my-zsh'
     task :oh_my_zsh do
+      puts
       puts "Installing oh-my-zsh"
-      if Dir.exist File.join(Dir.home, '.oh_my_zsh')
+      if Dir.exist? File.join(Dir.home, '.oh-my-zsh')
         puts "Looks like you've already got oh-my-zsh installed! Never mind, then."
       else
         sh 'git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh'
@@ -32,11 +35,12 @@ namespace :seed do
 
     desc 'Clone dotfiles repo and run symlinking script'
     task :dotfiles do
+      puts
       puts "Configuring dotfiles..."
       dotfiles_path = File.join(Dir.home, 'dotfiles')
       before_dir = Dir.pwd
 
-      if Dir.exist dotfiles_path
+      if Dir.exist? dotfiles_path
         puts "Looks like you've already got a dotfiles folder. We'll just make sure we've got the latest."
         Dir.chdir dotfiles_path
         sh 'git pull'
