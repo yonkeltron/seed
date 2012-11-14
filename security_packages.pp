@@ -13,7 +13,7 @@ class security_packages {
   }
 
   #make sure these get removed
-  pacakge {['nfs-common', 'portmap', 'rpcbind', 'locate', 'xinetd']:
+  package {['nfs-common', 'portmap', 'rpcbind', 'locate', 'xinetd']:
     ensure => purged
   }
 }

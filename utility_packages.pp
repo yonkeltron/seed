@@ -3,3 +3,5 @@ class utility_packages {
     ensure => present,
   }
 }
+
+class { 'utility_packages': }
