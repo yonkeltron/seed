@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-echo "Seed script beginning at $date"
+echo "⚙ Seed script beginning at $date"
 
 function _pretty_section_print() {
-    print -P "\n" %F{green}"===>"%f %F{magenta}$1%f
+    print -P "\n ⚙" %F{green}"===>"%f %F{magenta}$1%f
 }
 
 # cd into seed directory
@@ -65,4 +65,4 @@ function {
     rake seed:full
 }
 echo
-echo "Looks like we're done at $(date)"
+echo " ⚙ Looks like we're done at $(date)"
