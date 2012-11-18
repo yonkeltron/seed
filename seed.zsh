@@ -2,25 +2,29 @@
 
 echo "Seed script beginning at $date"
 
+function _pretty_section_print() {
+    print -P "\n" %F{green}"===>"%f %F{magenta}$1%f
+}
+
 # cd into seed directory
 cd $HOME/seed
 
 # get curl installed
-
+_pretty_section_print "curl and puppet"
 function {
     echo "We'll try to install curl and puppet knowing the package manager will Do The Right Thing (TM)"
     sudo aptitude install curl puppet
 }
 
 # let puppet install packages needed for rvm
-echo "\n ===> Build-related packages"
+_pretty_section_print "Build-related packages"
 function {
     echo "Now installing base packages with puppet. This should include all you need to get going with the rest of the seed."
     sudo puppet apply build_packages.pp
 }
 
 # get rvm installed
-echo "\n ===> rvm"
+_pretty_section_print "rvm"
 function {
     local rvm_path=$HOME/.rvm
     if [[ (-d $rvm_path) && (-x $rvm_path/scripts/rvm) ]]; then
@@ -36,7 +40,7 @@ function {
 source $HOME/.rvm/scripts/rvm
 
 # actually install a ruby if needed
-echo "\n ===> ruby"
+_pretty_section_print "ruby"
 function {
     if [[ -z $(rvm list default) ]]; then
         echo "I think we need to install a ruby!"
@@ -47,7 +51,7 @@ function {
 }
 
 # install gems needed by irbrc and config
-echo "\n ==> gems"
+_pretty_section_print "gems"
 function {
     gems_to_install=(wirble hirb ansi)
     echo "Installing some needed gems: $gems_to_install"
@@ -55,7 +59,7 @@ function {
 }
 
 # let rake do what it does best
-echo "\n ==> rake"
+_pretty_section_print "rake"
 function {
     echo "Handing off to $(rake --version) at $(date)"
     rake seed:full
