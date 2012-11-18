@@ -1,6 +1,14 @@
 #!/usr/bin/env zsh
 
+echo
 echo "⚙ Seed script beginning at $date"
+echo
+echo "                   _           _"
+echo " ___  ___  ___  __| |  _______| |__"
+echo "/ __|/ _ \/ _ \/ _' | |_  / __| '_ \ "
+echo "\__ \  __/  __/ (_| |_ / /\__ \ | | |"
+echo "|___/\___|\___|\__,_(_)___|___/_| |_|"
+echo
 
 function _pretty_section_print() {
     print -P "\n ⚙" %F{green}"===>"%f %F{magenta}$1%f
