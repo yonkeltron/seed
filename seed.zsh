@@ -2,6 +2,9 @@
 
 echo "Seed script beginning at $date"
 
+# cd into seed directory
+cd $HOME/seed
+
 # get curl installed
 
 function {
