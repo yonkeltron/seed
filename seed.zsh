@@ -5,29 +5,8 @@ echo "Seed script beginning at $date"
 # get curl installed
 
 function {
-    packages_to_install=(curl puppet);
-    package_list="";
-
-    for package in $packages_to_install; do
-        local package_path=$(which $package);
-
-        echo
-
-        if [[ -x $package_path ]]; then
-            echo "Good, you've got $package installed:"
-            echo $($package --version)
-        else
-            echo "You need $package installed. We'll install it."
-            package_list+="$package "; # KEEP the trailing space, please.
-        fi
-    done
-
-    if [[ -n "$package_list" ]]; then
-        echo "You need to install $package_list so we'll do that now."
-        sudo aptitude install $package_list
-    else
-        echo "Nothing to install, looks like you've got all you need.";
-    fi
+    echo "We'll try to install curl and puppet knowing the package manager will Do The Right Thing (TM)"
+    sudo aptitude install curl puppet
 }
 
 # let puppet install packages needed for rvm
