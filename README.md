@@ -1,4 +1,10 @@
-# seed.zsh
+    ╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋┏┓
+    ╋╋╋╋╋╋╋╋╋╋╋┃┃╋╋╋╋╋╋╋┃┃
+    ┏━━┳━━┳━━┳━┛┃┏━━━┳━━┫┗━┓
+    ┃━━┫┃━┫┃━┫┏┓┃┣━━┃┃━━┫┏┓┃
+    ┣━━┃┃━┫┃━┫┗┛┣┫┃━━╋━━┃┃┃┃
+    ┗━━┻━━┻━━┻━━┻┻━━━┻━━┻┛┗┛
+
 
 Scripts and config needed to get a machine setup in the way I like. I
 want to try and use the best tools for each part of the job.
