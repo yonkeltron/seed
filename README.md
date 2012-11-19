@@ -22,17 +22,17 @@ right tool for the right job.
 
 Things that this depends on to get started:
 
-* The OS: (Debian)[http://www.debian.org/]
+* The OS: [Debian](http://www.debian.org/)
   * Ideally upgraded to testing and with all core packages up to date
   * A user with sudo powers
-* The shell:(ZSH)[http://www.zsh.org/]
+* The shell:[ZSH](http://www.zsh.org/)
 
 Things which this script will install on its own to perform various tasks:
 
-* For pulling in code: (git)[http://git-scm.com/]
-* For installing packages: (puppet)[http://puppetlabs.com/]
-* For installing and managing ruby: (rvm)[http://rvm.io]
-* For structuring and executing tasks: (rake)[http://rake.rubyforge.org/]
+* For pulling in code: [git](http://git-scm.com/)
+* For installing packages: [puppet](http://puppetlabs.com/)
+* For installing and managing ruby: [rvm](http://rvm.io)
+* For structuring and executing tasks: [rake](http://rake.rubyforge.org/)
 
 In short, we use ZSH to install just enough to install puppet to
 install just enough to install rvm and ruby to install just enough to
@@ -44,4 +44,4 @@ I'd like to look into the wisdom of using something like
 [thor](https://github.com/wycats/thor) to manage a bit more than just
 using rake and also delegating even more to puppet. I also need to
 tighten up better integration with my
-(dotfiles)[https://github.com/yonkeltron/dotfiles].
+[dotfiles](https://github.com/yonkeltron/dotfiles).
